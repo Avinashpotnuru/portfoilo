@@ -1,13 +1,10 @@
 import React from "react";
 
+import { tabs } from "@/src/Data";
+import ProjectsFilter from "@/src/components/ProjectsFilter";
+
 const ProjectsPage = () => {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold text-cyan-500 my-2 sm:my-4 text-center ">
-        My Projects
-      </h1>
-    </div>
-  );
+  return <ProjectsFilter />;
 };
 
 export default ProjectsPage;

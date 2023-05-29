@@ -2,3 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.contact {
+    border: none;
+    padding: 10px ;
+   
+    position: relative;
+    background: transparent;
+    color: black;
+    text-transform: uppercase;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .contact:hover {
+    color: white;
+  }
+  span {
+    transition: all 0.7s;
+    z-index: -1;
+  }
+
+  .contact .first {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: black;
+  }
+
+  .contact:hover .first {
+    top: 0;
+    right: 0;
+  }
+  .contact .second {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: -100%;
+    height: 100%;
+    width: 25%;
+    background: black;
+  }
+
+  .contact:hover .second {
+    top: 0;
+    left: 50%;
+  }
+
+  .contact .third {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    top: 100%;
+    width: 25%;
+    background: black;
+  }
+
+  .contact:hover .third {
+    top: 0;
+    left: 25%;
+  }
+
+  .contact .fourth {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    background: black;
+  }
+
+  .contact:hover .fourth {
+    top: 0;
+    left: 0;
+  }

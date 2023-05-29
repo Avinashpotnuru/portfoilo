@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   headerPopup: { status: false, helperData: null },
+  contactPopup: { status: false, helperData: null },
 };
 
 const popSlice = createSlice({
@@ -17,8 +18,22 @@ const popSlice = createSlice({
       state.headerPopup.status = false;
       state.headerPopup.helperData = null;
     },
+    openContactPopup: (state, action) => {
+      state.contactPopup.status = true;
+      state.contactPopup.helperData = action.payload;
+    },
+
+    closeContactPopup: (state, action) => {
+      state.contactPopup.status = false;
+      state.contactPopup.helperData = null;
+    },
   },
 });
 
-export const { openHeaderPopup, closeHeaderPopup } = popSlice.actions;
+export const {
+  openHeaderPopup,
+  closeHeaderPopup,
+  openContactPopup,
+  closeContactPopup,
+} = popSlice.actions;
 export default popSlice.reducer;

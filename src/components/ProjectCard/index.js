@@ -1,6 +1,8 @@
+import Link from "next/link";
 import React from "react";
 
-const ProjectCard = () => {
+const ProjectCard = ({ data }) => {
+  console.log(data);
   return (
     <div className="min-h-[400px] bg-slate-400 w-[90%] mx-auto shadow-2xl rounded-2xl py-4 px-3">
       <div className="h-1/2">
@@ -13,16 +15,15 @@ const ProjectCard = () => {
 
       <div className="h-1/2">
         <h1 className="text-lg font-extrabold text-center my-4">
-          Project Name
+          {data?.title}
         </h1>
-        <h1 className="text-center">
-          implemented Jobby App where users can log in and can see a list of
-          jobs with search by Job title,
-        </h1>
+        <h1 className="text-center">{data?.description}</h1>
         <div className="text-center my-4 ">
-          <button className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 mx-auto my-1 ">
-            Read more
-          </button>
+          <Link href={data?.Link}>
+            <button className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 mx-auto my-1 ">
+              Read more
+            </button>
+          </Link>
         </div>
       </div>
     </div>

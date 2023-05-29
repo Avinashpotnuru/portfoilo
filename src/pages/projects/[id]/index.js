@@ -12,7 +12,7 @@ const ProjectInfoPages = () => {
   const pageToRender = {
     "todo-list": pages?.todolist,
     "movies-app": pages?.moviesApp,
-    "restaurant-website": pages?.RestaurantWebsite,
+    restaurant: pages?.RestaurantWebsite,
     "food-munch": pages?.FoodMunch,
   };
 

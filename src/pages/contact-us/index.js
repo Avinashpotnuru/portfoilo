@@ -1,10 +1,11 @@
-import ContactUs from "@/src/components/Contact";
+import Contact from "@/src/components/Contact";
+
 import React from "react";
 
 const ContactUsPage = () => {
   return (
     <div>
-      <ContactUs />
+      <Contact />
     </div>
   );
 };
