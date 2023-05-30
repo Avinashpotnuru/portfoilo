@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store } from "../store/store";
 import Layout from "../components/Layout";
 import ContactPopup from "../components/ContactPopup";
+import DetailsPopup from "../components/DetailsPopup";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
         <ContactPopup />
+        <DetailsPopup />
       </Layout>
     </Provider>
   );

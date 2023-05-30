@@ -20,9 +20,11 @@ const ProjectCard = ({ data }) => {
         <h1 className="text-center">{data?.description}</h1>
         <div className="text-center my-4 ">
           <Link href={data?.Link}>
-            <button className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 mx-auto my-1 ">
+            {/* <button className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 mx-auto my-1 ">
               Read more
-            </button>
+            </button> */}
+
+            <button className="readMore text-white">Read more</button>
           </Link>
         </div>
       </div>

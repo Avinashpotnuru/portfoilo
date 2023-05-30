@@ -6,7 +6,7 @@ import { IoCall } from "react-icons/io";
 // const FaUserTie = contactDetails[1];
 
 const ContactCard = ({ data }) => {
-  console.log("data", data);
+  // console.log("data", data);
   return (
     <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center border border-blue-300 ">
       {/* <div className="my-5">{data?.icon}</div> */}

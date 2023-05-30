@@ -9,9 +9,9 @@
    
     position: relative;
     background: transparent;
-    color: black;
+    color: green;
     text-transform: uppercase;
-    border: 3px solid black;
+    border: 3px solid green;
     cursor: pointer;
     transition: all 0.7s;
     overflow: hidden;
@@ -33,7 +33,7 @@
     top: 0;
     width: 25%;
     height: 100%;
-    background: black;
+    background: green;
   }
 
   .contact:hover .first {
@@ -47,7 +47,7 @@
     top: -100%;
     height: 100%;
     width: 25%;
-    background: black;
+    background: green;
   }
 
   .contact:hover .second {
@@ -62,7 +62,7 @@
     height: 100%;
     top: 100%;
     width: 25%;
-    background: black;
+    background: green;
   }
 
   .contact:hover .third {
@@ -77,10 +77,63 @@
     top: 0;
     height: 100%;
     width: 25%;
-    background: black;
+    background: green;
   }
 
   .contact:hover .fourth {
     top: 0;
     left: 0;
+  }
+
+ 
+  .readMore {
+    margin: 20px auto;
+    border: none;
+    color: white;
+    /* padding: 10px 44px; */
+    font-size: 20px;
+    position: relative;
+    
+  }
+  .readMore::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: green;
+    color: aquamarine;
+    
+   
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .readMore .readMore-text {
+    color: white;
+    mix-blend-mode: difference;
+  }
+  .readMore:hover::before {
+    /* background: green; */
+    color: bisque;
+  
+    width: 100%;
+  }
+  .readMore.rounded {
+    border-radius: 50px;
+  }
+  .readMore.rounded .text-green {
+    color: #00F0B5;
+    mix-blend-mode: difference;
+  }
+  .readMore.rounded::before {
+    border-radius: 50px;
+    width: 25%;
+    background: #00F0B5;
+    
+  }
+  .readMore.rounded:hover::before {
+    background: #00F0B5;
+    width: 100%;
+    
   }

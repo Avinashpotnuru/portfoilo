@@ -50,17 +50,17 @@ const Contact = () => {
               <HiOutlineMail size={50} />
             </div>
           </div>
-          <div className="max-w-[90%] flex justify-center items-center sm:hidden">
-            <span className="sm:text-2xl font-semibold  text-center  ">
+          <div className="max-w-[90%] flex justify-center items-center  sm:hidden ">
+            <h1 className="sm:text-2xl font-semibold  text-center  ">
               potnuruavinash111
               <br />
               @gmail.com
-            </span>
+            </h1>
           </div>
-          <div className="max-w-[90%] justify-center items-center hidden sm:flex ">
-            <span className="sm:text-2xl font-semibold  text-center  ">
+          <div className="max-w-[90%] justify-center items-center  flex ">
+            <h1 className="sm:text-2xl font-semibold  text-center hidden sm:block  ">
               potnuruavinash111 @gmail.com
-            </span>
+            </h1>
           </div>
         </div>
         <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5  ">
