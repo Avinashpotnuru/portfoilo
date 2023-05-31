@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 
 import { pages } from "@/src/Data";
 import ProjectDetailPage from "@/src/components/ProjectDetailPage";
+import Fade from "@/src/components/Fade";
 
 const ProjectInfoPages = () => {
   const router = useRouter();
@@ -14,6 +15,7 @@ const ProjectInfoPages = () => {
     "movies-app": pages?.moviesApp,
     restaurant: pages?.RestaurantWebsite,
     "food-munch": pages?.FoodMunch,
+    "type-master": pages?.typeMaster,
   };
 
   useEffect(() => {
@@ -28,9 +30,11 @@ const ProjectInfoPages = () => {
   console.log(router);
 
   return (
-    <div>
-      <ProjectDetailPage data={pageToRender[id]} pageName={id} />
-    </div>
+    <Fade>
+      <div className="mt-24">
+        <ProjectDetailPage data={pageToRender[id]} pageName={id} />
+      </div>
+    </Fade>
   );
 };
 

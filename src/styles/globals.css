@@ -2,16 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px); 
+ 
+}
 .contact {
     border: none;
     padding: 10px ;
    
     position: relative;
     background: transparent;
-    color: green;
+    color: black;
     text-transform: uppercase;
-    border: 3px solid green;
+    border: 3px solid black;
     cursor: pointer;
     transition: all 0.7s;
     overflow: hidden;
@@ -33,7 +37,7 @@
     top: 0;
     width: 25%;
     height: 100%;
-    background: green;
+    background: black;
   }
 
   .contact:hover .first {
@@ -47,7 +51,7 @@
     top: -100%;
     height: 100%;
     width: 25%;
-    background: green;
+    background: black;
   }
 
   .contact:hover .second {
@@ -62,7 +66,7 @@
     height: 100%;
     top: 100%;
     width: 25%;
-    background: green;
+    background: black;
   }
 
   .contact:hover .third {
@@ -77,7 +81,7 @@
     top: 0;
     height: 100%;
     width: 25%;
-    background: green;
+    background: black;
   }
 
   .contact:hover .fourth {
@@ -114,7 +118,7 @@
     mix-blend-mode: difference;
   }
   .readMore:hover::before {
-    /* background: green; */
+    background: green;
     color: bisque;
   
     width: 100%;

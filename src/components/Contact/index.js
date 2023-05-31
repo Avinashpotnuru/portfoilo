@@ -8,6 +8,8 @@ import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 
 import { openContactPopup } from "@/src/store/slices/popup";
+
+import { motion } from "framer-motion";
 const Contact = () => {
   const dispatch = useDispatch();
   return (
@@ -18,38 +20,38 @@ const Contact = () => {
 
       <div className="mb-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 md:gap-y-10 lg:gap-y-14 md:w-[90%]  md:mx-auto px-3">
         <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
-          <div className="my-5">
+          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
             <div className="sm:hidden">
               <FaUserAlt size={30} />
             </div>
             <div className="hidden sm:block">
               <FaUserAlt size={50} />
             </div>
-          </div>
+          </motion.div>
           <h1 className="sm:text-2xl font-semibold text-center">
             Avinash Potnuru
           </h1>
         </div>
         <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
-          <div className="my-5">
+          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
             <div className="sm:hidden">
               <MdCall size={30} />
             </div>
             <div className="hidden sm:block">
               <MdCall size={50} />
             </div>
-          </div>
+          </motion.div>
           <h1 className="sm:text-2xl font-semibold text-center">8919016096</h1>
         </div>
         <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
-          <div className="my-5">
+          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
             <div className="sm:hidden">
               <HiOutlineMail size={30} />
             </div>
             <div className="hidden sm:block">
               <HiOutlineMail size={50} />
             </div>
-          </div>
+          </motion.div>
           <div className="max-w-[90%] flex justify-center items-center  sm:hidden ">
             <h1 className="sm:text-2xl font-semibold  text-center  ">
               potnuruavinash111
@@ -64,9 +66,9 @@ const Contact = () => {
           </div>
         </div>
         <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5  ">
-          <div className="my-4">
+          <motion.div className="my-4">
             <h1 className="sm:text-2xl font-semibold text-center">Follow </h1>
-          </div>
+          </motion.div>
           <div className="flex justify-around items-center py-5 w-full sm:w-[60%] ">
             <a href="https://github.com/Avinashpotnuru" target="_blank">
               <BsGithub size={25} />

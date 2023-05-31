@@ -4,15 +4,21 @@ import { store } from "../store/store";
 import Layout from "../components/Layout";
 import ContactPopup from "../components/ContactPopup";
 import DetailsPopup from "../components/DetailsPopup";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-        <ContactPopup />
-        <DetailsPopup />
-      </Layout>
-    </Provider>
+    <>
+      <Head>
+        <title>{`Portfolio`}</title>
+      </Head>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+          <ContactPopup />
+          <DetailsPopup />
+        </Layout>
+      </Provider>
+    </>
   );
 }

@@ -18,8 +18,8 @@ const Header = () => {
 
   // const openToggle = useSelector((state) => state.headerPopup.status);
   return (
-    <div className="shadow-md w-full ">
-      <div className="flex items-center justify-between bg-white py-4 md:px-10 px-7">
+    <div className="shadow-md w-full relative ">
+      <div className="flex items-center justify-between  bg-white py-4 md:px-10 px-7 fixed top-0 left-0 right-0 z-10">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
   text-gray-800"

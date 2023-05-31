@@ -1,13 +1,17 @@
 // const inter = Inter({ subsets: ["latin"] });
 
+import Head from "next/head";
 import About from "../components/About";
 import MyProjects from "../components/MyProjects";
+import Fade from "../components/Fade";
 
 export default function Home() {
   return (
-    <h1 className="">
-      <About />
-      <MyProjects />
-    </h1>
+    <Fade>
+      <div className=" mt-24 ">
+        <About />
+        <MyProjects />
+      </div>
+    </Fade>
   );
 }

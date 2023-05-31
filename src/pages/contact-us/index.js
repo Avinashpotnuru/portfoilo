@@ -1,12 +1,15 @@
 import Contact from "@/src/components/Contact";
+import Fade from "@/src/components/Fade";
 
 import React from "react";
 
 const ContactUsPage = () => {
   return (
-    <div>
-      <Contact />
-    </div>
+    <Fade>
+      <div className="mt-24">
+        <Contact />
+      </div>
+    </Fade>
   );
 };
 
