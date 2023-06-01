@@ -13,11 +13,18 @@ import { motion } from "framer-motion";
 
 const iconVariants = {
   hover: {
-    scale: 1.1,
+    scale: 1.3,
 
+    marginBottom: "10px",
+  },
+};
+
+const cardIconVariants = {
+  hover: {
+    scale: 0.7,
+    rotateZ: 360,
     transition: {
-      duration: 0.3,
-      yoyo: Infinity,
+      duration: 0.8,
     },
   },
 };
@@ -45,9 +52,14 @@ const Contact = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h1 className="text-2xl md:text-5xl font-bold text-center mb-5 md:my-10">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.8, delay: 1 }}
+        className="text-2xl md:text-5xl font-bold text-center mb-5 md:my-10"
+      >
         Get in touch
-      </h1>
+      </motion.h1>
 
       <div className="mb-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 md:gap-y-10 lg:gap-y-14 md:w-[90%]  md:mx-auto px-3">
         <motion.div
@@ -59,7 +71,11 @@ const Contact = () => {
           }}
           className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
         >
-          <motion.div whileHover={{}} className="my-5">
+          <motion.div
+            variants={cardIconVariants}
+            whileHover="hover"
+            className="my-5"
+          >
             <div className="sm:hidden">
               <FaUserAlt size={30} />
             </div>
@@ -84,7 +100,11 @@ const Contact = () => {
           }}
           className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
         >
-          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
+          <motion.div
+            variants={cardIconVariants}
+            whileHover="hover"
+            className="my-5"
+          >
             <div className="sm:hidden">
               <MdCall size={30} />
             </div>
@@ -103,7 +123,11 @@ const Contact = () => {
           }}
           className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
         >
-          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
+          <motion.div
+            variants={cardIconVariants}
+            whileHover="hover"
+            className="my-5"
+          >
             <div className="sm:hidden">
               <HiOutlineMail size={30} />
             </div>
@@ -137,25 +161,44 @@ const Contact = () => {
             <h1 className="sm:text-2xl font-semibold text-center">Follow </h1>
           </motion.div>
           <div className="flex justify-around items-center py-5 w-full sm:w-[60%] ">
-            <a href="https://github.com/Avinashpotnuru" target="_blank">
+            <motion.a
+              variants={iconVariants}
+              whileHover="hover"
+              href="https://github.com/Avinashpotnuru"
+              target="_blank"
+            >
               <BsGithub size={25} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={iconVariants}
+              whileHover="hover"
               href="https://www.linkedin.com/in/avinash-potnuru/"
               target="_blank"
             >
               <BsLinkedin size={25} />
-            </a>
+            </motion.a>
 
-            <BsInstagram size={25} />
-            <BsFacebook size={25} />
+            <motion.a
+              variants={iconVariants}
+              whileHover="hover"
+              href=""
+              target="_blank"
+            >
+              <BsInstagram size={25} />
+            </motion.a>
+            <motion.a
+              variants={iconVariants}
+              whileHover="hover"
+              href=""
+              target="_blank"
+            >
+              <BsFacebook size={25} />
+            </motion.a>
           </div>
         </motion.div>
       </div>
       <div className=" flex justify-center items-center my-3 ">
-        <motion.button
-          variants={iconVariants}
-          whileHover="hover"
+        <button
           onClick={() => dispatch(openContactPopup())}
           className="contact"
         >
@@ -164,7 +207,7 @@ const Contact = () => {
           <span class="second"></span>
           <span class="third"></span>
           <span class="fourth"></span>
-        </motion.button>
+        </button>
       </div>
     </div>
   );

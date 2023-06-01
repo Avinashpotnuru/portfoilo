@@ -2,6 +2,8 @@ import { tabs, projectsData } from "@/src/Data";
 import React, { useState } from "react";
 import ProjectCard from "../ProjectCard";
 
+import { motion } from "framer-motion";
+
 const ProjectsFilter = () => {
   const [tabsId, setTabsId] = useState("");
 
@@ -15,14 +17,26 @@ const ProjectsFilter = () => {
   return (
     <div>
       <div className="flex flex-col sm:flex-row w-full sm:justify-around sm:items-center">
-        <h1 className="text-3xl font-bold text-cyan-500  sm:my-4 text-center my-2 sm:w-1/2">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.8, delay: 1 }}
+          className="text-3xl font-bold text-cyan-500  sm:my-4 text-center my-2 sm:w-1/2"
+        >
           My Projects
-        </h1>
+        </motion.h1>
         <div className="flex justify-center space-x-10 items-center my-9 sm:w-1/2">
           {tabs.map((val, idx) => (
             <button
               onClick={() => setTabsId(val?.category)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className={` text-black  py-2 px-4 rounded
+              
+              ${
+                tabsId == val.category
+                  ? "border-[#0c7fb0] border-b-2  pb-2 font-extrabold"
+                  : "font-medium"
+              }
+              `}
               key={idx}
             >
               {val.tab}

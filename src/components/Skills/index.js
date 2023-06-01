@@ -8,11 +8,23 @@ import Image from "next/image";
 const Skills = () => {
   return (
     <div className="flex flex-col justify-center items-center my-5 w-full mx-auto">
-      <h1 className="text-3xl font-medium my-3 md:my-6">Technical Skills</h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.7 }}
+        className="text-3xl font-medium my-3 md:my-6"
+      >
+        Technical Skills
+      </motion.h1>
       <div className="flex flex-col border-2 border-gray-500 rounded-md lg:py-10  w-[95%] mx-auto sm:w-[90%] ">
-        <h1 className="text-2xl font-medium my-3 md:my-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.7 }}
+          className="text-2xl font-medium my-3 md:my-6 text-center"
+        >
           Skills
-        </h1>
+        </motion.h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 w-full">
           {skillsData.map((item, idx) => (
             <motion.div

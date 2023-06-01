@@ -5,7 +5,12 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 import { motion } from "framer-motion";
 
+import { usePathname } from "next/navigation";
+import { HiOutlineHeart } from "react-icons/hi";
+
 const Header = () => {
+  const path = usePathname();
+  // console.log(path);
   let Links = [
     { name: "HOME", link: "/" },
     { name: "ABOUT", link: "/about" },
@@ -30,7 +35,7 @@ const Header = () => {
         </div>
 
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-20 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+          className={` md:flex md:items-center bg-white md:pb-0  absolute md:static pl-9  md:z-auto z-20 left-0 w-full md:w-auto md:pl-0  transition-all duration-500 ease-in ${
             open ? "top-16 " : "top-[-490px]"
           }`}
         >
@@ -46,7 +51,11 @@ const Header = () => {
               }}
               onClick={() => setOpen(false)}
               key={link.name}
-              className="md:ml-8 text-lg md:my-0 my-7"
+              className={`md:ml-8 text-lg md:my-0 my-7 ${
+                path == link.link
+                  ? " sm:border-[#0c7fb0] sm:border-b-2 font-bold pb-1"
+                  : ""
+              }`}
             >
               <Link
                 href={link.link}

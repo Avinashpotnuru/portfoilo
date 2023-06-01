@@ -1,7 +1,23 @@
 import Link from "next/link";
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
+
+const iconVariants = {
+  hover: {
+    scale: 1.3,
+    rotateZ: 360,
+    borderRadius: "50%",
+    borderColor: "#0c7fb0",
+    borderWidth: "2.5px",
+    padding: "2.2px",
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 const Footer = () => {
   return (
@@ -19,22 +35,38 @@ const Footer = () => {
           </h1>
         </div>
         <div className="flex justify-around items-center py-5 ">
-          <a
-            className="social-networks square spin-icon"
+          <motion.a
+            variants={iconVariants}
+            whileHover="hover"
             href="https://github.com/Avinashpotnuru"
             target="_blank"
           >
-            <BsGithub color="red" size={34} />
-          </a>
-          <a
+            <BsGithub size={34} />
+          </motion.a>
+          <motion.a
+            variants={iconVariants}
+            whileHover="hover"
             href="https://www.linkedin.com/in/avinash-potnuru/"
             target="_blank"
           >
-            <BsLinkedin color="red" size={34} />
-          </a>
-
-          <BsInstagram color="red" size={34} />
-          <BsFacebook color="red" size={34} />
+            <BsLinkedin size={34} />
+          </motion.a>
+          <motion.a
+            variants={iconVariants}
+            whileHover="hover"
+            href=""
+            target="_blank"
+          >
+            <BsInstagram size={34} />
+          </motion.a>
+          <motion.a
+            variants={iconVariants}
+            whileHover="hover"
+            href=""
+            target="_blank"
+          >
+            <BsFacebook size={34} />
+          </motion.a>
         </div>
         <h1 className="text-center py-4 px-5">
           Copyright ©2023 Avinash Potnuru, Inc. All rights reserved

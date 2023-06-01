@@ -13,7 +13,14 @@ import { motion } from "framer-motion";
 const Education = () => {
   return (
     <div className="flex flex-col justify-center items-center my-5 sm:my-8 w-full mx-auto">
-      <h1 className="text-3xl font-medium my-3 md:my-6">Education Details</h1>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.7 }}
+        className="text-3xl font-medium my-3 md:my-6"
+      >
+        Education Details
+      </motion.h1>
       <div className="flex flex-col border-2 border-gray-500 rounded-md  w-[95%] mx-auto sm:w-[90%] px-2 sm:px-5 ">
         <div className="grid grid-cols-1    divide-y-[2px] divide-gray-400 ">
           {educationDetails.map((val, idx) => (
