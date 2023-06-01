@@ -17,7 +17,7 @@ const ProjectDetailPage = ({ data }) => {
         <div className="sm:w-1/2  sm:flex sm:justify-center sm:items-center ">
           <img
             className="w-[95%] h-full  sm:h-[90%]  sm:my-auto  mx-auto"
-            src="/todo.png"
+            src={data.imgUrl}
             alt="todo"
           />
         </div>

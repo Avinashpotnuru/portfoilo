@@ -1,6 +1,8 @@
 import React from "react";
 
 import { skillsData } from "@/src/Data";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Skills = () => {
@@ -13,7 +15,14 @@ const Skills = () => {
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 w-full">
           {skillsData.map((item, idx) => (
-            <div
+            <motion.div
+              initial={{
+                scale: 0,
+                opacity: 0,
+                translateX: idx % 2 == 1 ? "-100vh" : "100vh",
+              }}
+              animate={{ scale: 1, opacity: 1, translateX: 0 }}
+              transition={{ delay: idx * 0.5, duration: idx * 0.3 }}
               key={idx}
               className="p-9 flex flex-col justify-center items-center"
             >
@@ -24,7 +33,7 @@ const Skills = () => {
                 alt={`skills${idx + 1}`}
               />
               <h1 className="text-center my-2 font-semibold">{item}</h1>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

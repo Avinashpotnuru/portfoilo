@@ -1,15 +1,13 @@
 import Link from "next/link";
+
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
 
-import { openHeaderPopup, closeHeaderPopup } from "@/src/store/slices/popup";
+import { motion } from "framer-motion";
 
 const Header = () => {
-  // const dispatch = useSelector();
   let Links = [
     { name: "HOME", link: "/" },
-
     { name: "ABOUT", link: "/about" },
     { name: "PROJECT'S", link: "/projects" },
     { name: "CONTACT", link: "/contact-us" },
@@ -36,8 +34,16 @@ const Header = () => {
             open ? "top-16 " : "top-[-490px]"
           }`}
         >
-          {Links.map((link) => (
-            <li
+          {Links.map((link, idx) => (
+            <motion.li
+              initial={{ y: -500 }}
+              animate={{ y: 0 }}
+              transition={{
+                delay: 1,
+                duration: 1.2,
+                type: "spring",
+                shiftiness: 140,
+              }}
               onClick={() => setOpen(false)}
               key={link.name}
               className="md:ml-8 text-lg md:my-0 my-7"
@@ -48,7 +54,7 @@ const Header = () => {
               >
                 {link.name}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

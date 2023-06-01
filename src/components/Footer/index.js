@@ -19,7 +19,11 @@ const Footer = () => {
           </h1>
         </div>
         <div className="flex justify-around items-center py-5 ">
-          <a href="https://github.com/Avinashpotnuru" target="_blank">
+          <a
+            className="social-networks square spin-icon"
+            href="https://github.com/Avinashpotnuru"
+            target="_blank"
+          >
             <BsGithub color="red" size={34} />
           </a>
           <a

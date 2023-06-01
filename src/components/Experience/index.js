@@ -2,14 +2,23 @@ import React from "react";
 
 import { experienceData } from "@/src/Data";
 
+import { motion } from "framer-motion";
+
 const Experience = () => {
   return (
     <div className="flex flex-col justify-center items-center my-5">
       <h1 className="text-3xl font-medium my-3 md:my-6">Experience</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-2 lg:w-[80%]">
-        {experienceData.map((val) => {
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-2 lg:w-[80%]">
+        {experienceData.map((val, id) => {
           return (
-            <div
+            <motion.div
+              initial={{
+                scale: 0,
+                opacity: 0,
+                translateX: id % 2 == 1 ? "-100vh" : "100vh",
+              }}
+              animate={{ scale: 1, opacity: 1, translateX: 0 }}
+              transition={{ delay: 1.4, duration: 1.4 }}
               key={val.id}
               className="px-4 py-5  border-2 border-gray-400 mx-4 rounded-md"
             >
@@ -21,10 +30,10 @@ const Experience = () => {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

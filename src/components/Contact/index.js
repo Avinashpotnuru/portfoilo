@@ -10,6 +10,37 @@ import { useDispatch } from "react-redux";
 import { openContactPopup } from "@/src/store/slices/popup";
 
 import { motion } from "framer-motion";
+
+const iconVariants = {
+  hover: {
+    scale: 1.1,
+
+    transition: {
+      duration: 0.3,
+      yoyo: Infinity,
+    },
+  },
+};
+
+const contactCard = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+    x: "-100vh",
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    transition: {
+      duration: 0.9,
+      delay: 1.2,
+      type: "spring",
+      stiffness: 60,
+    },
+  },
+};
+
 const Contact = () => {
   const dispatch = useDispatch();
   return (
@@ -19,20 +50,40 @@ const Contact = () => {
       </h1>
 
       <div className="mb-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 md:gap-y-10 lg:gap-y-14 md:w-[90%]  md:mx-auto px-3">
-        <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
-          <motion.div whileHover={{ scale: 1.1 }} className="my-5">
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: "-100vh" }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{
+            duration: 1.3,
+            delay: 0.8,
+          }}
+          className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
+        >
+          <motion.div whileHover={{}} className="my-5">
             <div className="sm:hidden">
               <FaUserAlt size={30} />
             </div>
-            <div className="hidden sm:block">
+            <motion.div
+              variants={iconVariants}
+              whileHover="hover"
+              className="hidden sm:block"
+            >
               <FaUserAlt size={50} />
-            </div>
+            </motion.div>
           </motion.div>
           <h1 className="sm:text-2xl font-semibold text-center">
             Avinash Potnuru
           </h1>
-        </div>
-        <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: "-100vh" }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{
+            duration: 1.3,
+            delay: 1,
+          }}
+          className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
+        >
           <motion.div whileHover={{ scale: 1.1 }} className="my-5">
             <div className="sm:hidden">
               <MdCall size={30} />
@@ -42,8 +93,16 @@ const Contact = () => {
             </div>
           </motion.div>
           <h1 className="sm:text-2xl font-semibold text-center">8919016096</h1>
-        </div>
-        <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: "-100vh" }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{
+            duration: 1.3,
+            delay: 1.2,
+          }}
+          className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5 "
+        >
           <motion.div whileHover={{ scale: 1.1 }} className="my-5">
             <div className="sm:hidden">
               <HiOutlineMail size={30} />
@@ -64,8 +123,16 @@ const Contact = () => {
               potnuruavinash111 @gmail.com
             </h1>
           </div>
-        </div>
-        <div className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5  ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0, x: "-100vh" }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{
+            duration: 1.3,
+            delay: 1.4,
+          }}
+          className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5  "
+        >
           <motion.div className="my-4">
             <h1 className="sm:text-2xl font-semibold text-center">Follow </h1>
           </motion.div>
@@ -83,10 +150,12 @@ const Contact = () => {
             <BsInstagram size={25} />
             <BsFacebook size={25} />
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className=" flex justify-center items-center my-3 ">
-        <button
+        <motion.button
+          variants={iconVariants}
+          whileHover="hover"
           onClick={() => dispatch(openContactPopup())}
           className="contact"
         >
@@ -95,7 +164,7 @@ const Contact = () => {
           <span class="second"></span>
           <span class="third"></span>
           <span class="fourth"></span>
-        </button>
+        </motion.button>
       </div>
     </div>
   );

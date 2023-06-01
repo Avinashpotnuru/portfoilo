@@ -2,11 +2,23 @@
 import Link from "next/link";
 import React from "react";
 
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <div className="flex flex-col sm:flex-row sm:w-[80%] lg:w-[85%] mx-auto justify-center items-center my-4 ">
-      <div className="sm:w-1/2 order-2 sm:order-1 mx-auto p-5">
-        <h1 className="text-base  uppercase font-semibold my-1">hello,</h1>
+      <motion.div
+        initial={{ opacity: 0, scale: 0, x: "100vh" }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ delay: 1.1, duration: 1 }}
+        className="sm:w-1/2 order-2 sm:order-1 mx-auto p-5"
+      >
+        <motion.h1
+          whileHover={{ scale: 1.2 }}
+          className="text-base  uppercase font-semibold my-1"
+        >
+          hello,
+        </motion.h1>
         <h1 className="text-3xl   font-bold my-1 lg:text-[40px] lg:my-2">
           Avinash Potnuru
         </h1>
@@ -33,14 +45,19 @@ const About = () => {
             </a>
           </button>
         </div>
-      </div>
-      <div className="sm:w-1/2 order-1 sm:order-2">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0, x: "-100vh" }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ delay: 1.1, duration: 1 }}
+        className="sm:w-1/2 order-1 sm:order-2"
+      >
         <img
           className="w-[90%] sm-[95%] md:h-[380px] md:w-[380px] lg:h-[431px] lg:w-[400px] mx-auto"
           src="/mypic.jpg"
           alt="myImage"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

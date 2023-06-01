@@ -61,6 +61,7 @@ export const contactDetails = [
 ];
 
 const todolist = {
+  imgUrl: "/todo.png",
   title: "Todo App",
   technologies: "HTML, CSS, JavaScript, Bootstrap",
   description:
@@ -71,6 +72,7 @@ const todolist = {
 };
 
 const moviesApp = {
+  imgUrl: "/moviesapp.png",
   title: "Movies App",
   technologies:
     "HTML, CSS, JavaScript, React JS, Bootstrap, React Slick, Figma, client storage",
@@ -82,6 +84,7 @@ const moviesApp = {
 };
 
 const RestaurantWebsite = {
+  imgUrl: "/resturant.png",
   title: "Restaurant Website",
   technologies: " React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
   description: `It is a restaurant's website. Along with the ability to reserve a table, this app allows users to view the meal
@@ -93,6 +96,7 @@ const RestaurantWebsite = {
 };
 
 const FoodMunch = {
+  imgUrl: "/foodmuch.png",
   title: "Food Munch",
   technologies: "  HTML, CSS, Bootstrap",
   description: `Developed a responsive website for Food Store where users can see a list of food items, detailed information
@@ -103,6 +107,7 @@ const FoodMunch = {
 };
 
 const typeMaster = {
+  imgUrl: "/typemaster.png",
   title: "Typing Speed Test",
   technologies: "HTML, CSS, Bootstrap",
   description: ` Developed an application that measured the time he took to complete a given paragraph`,

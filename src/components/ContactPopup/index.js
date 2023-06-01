@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Modal from "../UI/Model";
 
+import { motion } from "framer-motion";
+
 import { AiOutlineClose } from "react-icons/ai";
 
 import {
@@ -12,6 +14,19 @@ import {
   closeContactPopup,
   openDetailsPopup,
 } from "@/src/store/slices/popup";
+
+const inputVariants = {
+  hidden: {
+    x: "-200vh",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      delay: 0.9,
+      duration: 0.8,
+    },
+  },
+};
 
 const ContactPopup = () => {
   const dispatch = useDispatch();
@@ -38,7 +53,7 @@ const ContactPopup = () => {
       <div className="bg-slate-500 relative   w-[95%] h-[70%] sm:h-[500px] sm:w-[500px] flex flex-col justify-center items-center">
         <div
           onClick={() => dispatch(closeContactPopup())}
-          className="absolute top-7 right-7"
+          className="absolute top-7 right-7 hover:text-[20px]"
         >
           <AiOutlineClose />
         </div>
@@ -54,7 +69,10 @@ const ContactPopup = () => {
             >
               FULL NAME
             </label>
-            <input
+            <motion.input
+              variants={inputVariants}
+              initial="hidden"
+              animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("firstName", {
                 required: true,
@@ -66,7 +84,10 @@ const ContactPopup = () => {
             <label className="block text-gray-700 text-sm font-bold my-3">
               EMAIL
             </label>
-            <input
+            <motion.input
+              variants={inputVariants}
+              initial="hidden"
+              animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("email", {
                 required: true,
@@ -79,7 +100,10 @@ const ContactPopup = () => {
               MESSAGE
             </label>
 
-            <textarea
+            <motion.textarea
+              variants={inputVariants}
+              initial="hidden"
+              animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("message", {
                 required: true,
