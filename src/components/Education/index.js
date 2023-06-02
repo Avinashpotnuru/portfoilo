@@ -17,7 +17,7 @@ const Education = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.7 }}
-        className="text-3xl font-medium my-3 md:my-6"
+        className="text-3xl font-medium my-3 md:my-6 font-roboto-slab"
       >
         Education Details
       </motion.h1>
@@ -33,7 +33,9 @@ const Education = () => {
             >
               <div className="flex items-center my-2 lg:my-3 ">
                 <FaSchool className="sm:text-[30px] mx-4" />
-                <h1 className=" font-bold  text-lg sm:text-2xl">{val.name}</h1>
+                <h1 className=" font-bold font-roboto-slab text-lg sm:text-xl">
+                  {val.name}
+                </h1>
               </div>
               <div className="flex items-center ">
                 <FaCalendarAlt className="sm:text-[30px] mx-4" />

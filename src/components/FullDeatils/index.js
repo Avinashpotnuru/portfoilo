@@ -12,7 +12,7 @@ const FullDetails = () => {
     <div className="py-5">
       <div className=" flex  justify-around items-center w-[90%] sm:w-[60%] md:w-[50%] lg:w-[30%] mx-auto">
         <button
-          className={`py-2 px-4 text-sm text-black   ${
+          className={`py-2 px-4 text-sm text-black font-Lexend  ${
             activeTab === 1
               ? "border-[#0c7fb0] border-b-2  font-medium pb-3"
               : "text-black"
@@ -22,7 +22,7 @@ const FullDetails = () => {
           Experience
         </button>
         <button
-          className={`py-2 px-4 text-sm text-black ${
+          className={`py-2 px-4 text-sm text-black font-Lexend ${
             activeTab === 2
               ? "border-[#0c7fb0] border-b-2  font-medium pb-3"
               : "text-black"
@@ -32,10 +32,8 @@ const FullDetails = () => {
           Skills
         </button>
         <button
-          className={`py-2 px-4 text-sm text-black   ${
-            activeTab === 3
-              ? "border-[#0c7fb0] border-b-2  font-medium pb-3"
-              : "text-black"
+          className={`py-2 px-4 text-sm text-black font-Lexend  ${
+            activeTab === 3 ? "border-[#0c7fb0] border-b-2 pb-3" : "text-black"
           }`}
           onClick={() => handleTabClick(3)}
         >

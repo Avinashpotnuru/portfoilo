@@ -56,7 +56,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.8, delay: 1 }}
-        className="text-2xl md:text-5xl font-bold text-center mb-5 md:my-10"
+        className="text-2xl font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10"
       >
         Get in touch
       </motion.h1>
@@ -87,7 +87,7 @@ const Contact = () => {
               <FaUserAlt size={50} />
             </motion.div>
           </motion.div>
-          <h1 className="sm:text-2xl font-semibold text-center">
+          <h1 className="sm:text-2xl font-semibold font-Lexend text-center">
             Avinash Potnuru
           </h1>
         </motion.div>
@@ -112,7 +112,9 @@ const Contact = () => {
               <MdCall size={50} />
             </div>
           </motion.div>
-          <h1 className="sm:text-2xl font-semibold text-center">8919016096</h1>
+          <h1 className="sm:text-2xl font-semibold text-center font-Lexend">
+            8919016096
+          </h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0, x: "-100vh" }}
@@ -136,14 +138,14 @@ const Contact = () => {
             </div>
           </motion.div>
           <div className="max-w-[90%] flex justify-center items-center  sm:hidden ">
-            <h1 className="sm:text-2xl font-semibold  text-center  ">
+            <h1 className="sm:text-2xl font-semibold  text-center font-Lexend  ">
               potnuruavinash111
               <br />
               @gmail.com
             </h1>
           </div>
           <div className="max-w-[90%] justify-center items-center  flex ">
-            <h1 className="sm:text-2xl font-semibold  text-center hidden sm:block  ">
+            <h1 className="sm:text-2xl font-semibold  text-center hidden sm:block font-Lexend  ">
               potnuruavinash111 @gmail.com
             </h1>
           </div>
@@ -158,7 +160,9 @@ const Contact = () => {
           className="bg-[#e1e1e1] shadow-md flex flex-col justify-center items-center py-5  "
         >
           <motion.div className="my-4">
-            <h1 className="sm:text-2xl font-semibold text-center">Follow </h1>
+            <h1 className="sm:text-2xl font-semibold text-center font-Lexend">
+              Follow{" "}
+            </h1>
           </motion.div>
           <div className="flex justify-around items-center py-5 w-full sm:w-[60%] ">
             <motion.a

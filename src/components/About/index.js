@@ -14,12 +14,12 @@ const About = () => {
         className="sm:w-1/2 order-2 sm:order-1 mx-auto p-5"
       >
         <motion.h1
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.2, originX: 0 }}
           className="text-base  uppercase font-semibold my-1"
         >
           hello,
         </motion.h1>
-        <h1 className="text-3xl   font-bold my-1 lg:text-[40px] lg:my-2">
+        <h1 className="text-3xl font-roboto-slab   font-bold my-1 lg:text-[40px] lg:my-2">
           Avinash Potnuru
         </h1>
         <h1 className="text-xl   font-medium my-1 lg:my-2">

@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const MyProjects = () => {
   return (
     <div className="mt-2 md:my-10 ">
-      <h1 className="text-2xl md:text-5xl font-bold text-center mb-5 md:my-10">
-        MyProjects
+      <h1 className="text-2xl font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10">
+        My Projects
       </h1>
       <motion.div
         initial={{ opacity: 0, x: "-100vh" }}

@@ -34,8 +34,8 @@ const MyDetails = () => {
         transition={{ delay: 1.1, duration: 1 }}
         className="sm:w-1/2  mx-auto p-5"
       >
-        <h1 className="text-3xl  uppercase font-semibold my-1">About Me</h1>
-        <h1 className="text-2xl   font-bold my-1 lg:text-[30px] lg:my-2">
+        <h1 className="text-2xl  uppercase font-semibold my-1">About Me</h1>
+        <h1 className="text-3xl font-roboto-slab  font-bold my-1 lg:text-[30px] lg:my-2">
           <span className="text-xl  font-semibold my-1 ">{"I'm "}</span>
           Avinash Potnuru
         </h1>

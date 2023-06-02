@@ -11,8 +11,8 @@ const ProjectsFilter = () => {
     ? projectsData
     : projectsData.filter((item) => item.category === tabsId);
 
-  //   console.log(filterData);
-  //   console.log(tabsId);
+  console.log(filterData);
+  console.log(tabsId);
 
   return (
     <div>
@@ -21,7 +21,7 @@ const ProjectsFilter = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.8, delay: 1 }}
-          className="text-3xl font-bold text-cyan-500  sm:my-4 text-center my-2 sm:w-1/2"
+          className="text-3xl font-roboto-slab font-bold text-cyan-500  sm:my-4 text-center my-2 sm:w-1/2"
         >
           My Projects
         </motion.h1>
@@ -29,7 +29,7 @@ const ProjectsFilter = () => {
           {tabs.map((val, idx) => (
             <button
               onClick={() => setTabsId(val?.category)}
-              className={` text-black  py-2 px-4 rounded
+              className={` text-black  py-2 px-4 rounded font-Lexend
               
               ${
                 tabsId == val.category

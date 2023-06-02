@@ -25,7 +25,7 @@ const ProjectCard = ({ data }) => {
       </div>
 
       <div className="h-1/2 px-3">
-        <h1 className="text-lg font-extrabold text-center my-4">
+        <h1 className="text-lg font-extrabold text-center my-4 font-Lexend ">
           {data?.title}
         </h1>
         <h1 className="text-center">{data?.description}</h1>

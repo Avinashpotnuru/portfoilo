@@ -26,7 +26,7 @@ export const projectsData = [
     imgUrl: "/foodmuch.png",
     title: "Food Munch",
     description: `Implemented Nxt Watch application which is a clone for YouTube where users can log in and can`,
-    category: "react",
+    category: "",
     Link: "/projects/food-munch",
   },
   {
@@ -103,7 +103,7 @@ const FoodMunch = {
   about a food item, and offers.`,
   projectLink: "",
   githubLink: "",
-  category: "javascript",
+  category: "",
 };
 
 const typeMaster = {
@@ -185,5 +185,53 @@ export const educationDetails = [
     duration: "2010 - 2012",
     course: "Intermediate(M.P.C)   ",
     location: "Srikakulam, Andhra Pradesh",
+  },
+];
+
+export const certificateData = [
+  {
+    name: "Certificate of Completion",
+    link: "https://certificate.givemycertificate.com/c/2f5ede0f-b267-40d0-924f-8289ef628a47",
+  },
+  {
+    name: "Industry Ready Certificate",
+    link: "https://certificates.ccbp.in/intensive/irc?id=N8KSBCC3DC",
+  },
+  {
+    name: "React",
+    link: "https://certificates.ccbp.in/intensive/react-js?id=AAGOMGFUGD",
+  },
+  {
+    name: "Build your own Dynamic Web Application",
+    link: "https://certificates.ccbp.in/intensive/dynamic-web-application?id=SZQMJZPYZE",
+  },
+  {
+    name: "Build Your Own Responsive Website",
+    link: "https://certificates.ccbp.in/intensive/responsive-website?id=NWABGNGVOQ",
+  },
+  {
+    name: "Build Your Own Static Website",
+    link: "https://certificates.ccbp.in/intensive/static-website?id=VMRRFPCHYQC",
+  },
+
+  {
+    name: "Developer Foundations",
+    link: "https://certificates.ccbp.in/intensive/developer-foundations?id=NRZEPVASZL",
+  },
+  {
+    name: "Introduction to Databases",
+    link: "https://certificates.ccbp.in/intensive/introduction-to-databases?id=ZNJJAIKWKU",
+  },
+  {
+    name: "JavaScript Essentials",
+    link: "https://certificates.ccbp.in/intensive/javascript-essentials?id=USSRDIXIFR",
+  },
+  {
+    name: "Programming Foundations with Python",
+    link: "https://certificates.ccbp.in/intensive/programming-foundations?id=AZLJQDUBBR",
+  },
+  {
+    name: "Responsive Web Design using Flex box",
+    link: "https://certificates.ccbp.in/intensive/flexbox?id=DBPXFIMNPQ",
   },
 ];
