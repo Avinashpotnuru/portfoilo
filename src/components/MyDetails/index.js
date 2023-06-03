@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
+
+// third party imports
+
 import { motion } from "framer-motion";
 
 const buttonVariants = {
@@ -15,7 +18,7 @@ const buttonVariants = {
 
 const MyDetails = () => {
   return (
-    <div className="flex flex-col sm:flex-row sm:w-[80%] lg:w-[85%] mx-auto justify-center items-center my-4 ">
+    <div className="flex flex-col sm:flex-row sm:w-[90%] lg:w-[85%] mx-auto justify-center items-center my-4 ">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -24,7 +27,7 @@ const MyDetails = () => {
       >
         <img
           className="w-[90%] sm-[95%] md:h-[380px] md:w-[380px] lg:h-[431px] lg:w-[400px] mx-auto"
-          src="/mypic.jpg"
+          src="/certificates/profile-pic (13).png"
           alt="myImage"
         />
       </motion.div>
@@ -52,7 +55,8 @@ const MyDetails = () => {
           <motion.button
             variants={buttonVariants}
             whileHover="hover"
-            className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 w-full lg:w-[45%] my-1 "
+            // className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 w-full lg:w-[45%] my-1 "
+            className="button-background-move"
           >
             <Link href={"/contact-us"}>Contact Us</Link>
           </motion.button>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React from "react";
+
+// third party imports
 
 import { motion } from "framer-motion";
 

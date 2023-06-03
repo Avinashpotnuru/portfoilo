@@ -1,8 +1,13 @@
 import React from "react";
 
+// third party imports
+
 import { FaUserAlt } from "react-icons/fa";
+
 import { MdCall } from "react-icons/md";
+
 import { HiOutlineMail } from "react-icons/hi";
+
 import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
 
 import { useDispatch } from "react-redux";
@@ -10,6 +15,8 @@ import { useDispatch } from "react-redux";
 import { openContactPopup } from "@/src/store/slices/popup";
 
 import { motion } from "framer-motion";
+
+//icon Variants
 
 const iconVariants = {
   hover: {

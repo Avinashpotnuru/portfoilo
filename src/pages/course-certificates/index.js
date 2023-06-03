@@ -1,5 +1,6 @@
+// import components
+
 import CourseCertificate from "@/src/components/CourseCertificate";
-import React from "react";
 
 const CourseCertificates = () => {
   return (

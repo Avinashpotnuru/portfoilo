@@ -1,10 +1,8 @@
 import React from "react";
 
-import { skillsData } from "@/src/Data";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import { skillsData } from "@/src/Data";
 const Skills = () => {
   return (
     <div className="flex flex-col justify-center items-center my-5 w-full mx-auto">

@@ -1,12 +1,13 @@
 import Link from "next/link";
 
 import React, { useState } from "react";
+
+// third party imports
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
-import { HiOutlineHeart } from "react-icons/hi";
 
 const Header = () => {
   const path = usePathname();
@@ -29,11 +30,11 @@ const Header = () => {
   text-gray-800"
         >
           <Link href={"/"}>
-            <div className="font-roboto font-extrabold "> Avinash </div>
+            <div className="font-roboto-slab font-extrabold "> Avinash </div>
           </Link>
         </div>
 
-        <div onClick={() => setOpen(!open)} className="sm:hidden">
+        <div onClick={() => setOpen(!open)} className="md:hidden">
           {!open ? <AiOutlineMenu /> : <AiOutlineClose />}
         </div>
 

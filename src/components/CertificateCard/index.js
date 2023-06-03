@@ -1,6 +1,4 @@
-import { certificateData } from "@/src/Data";
-import React from "react";
-
+// third party imports
 import { motion } from "framer-motion";
 
 const CertificateCard = ({ data, id }) => {
@@ -19,7 +17,7 @@ const CertificateCard = ({ data, id }) => {
         // type: "spring",
         // stiffness: 190,
       }}
-      className="card min-h-[350px] "
+      className="card h-[330px] sm:h-auto lg:h-[320px]"
     >
       <img src={`/certificates/certificate${id + 1}.jpeg`} alt="" />
 

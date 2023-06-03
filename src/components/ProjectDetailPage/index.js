@@ -1,8 +1,12 @@
 import Link from "next/link";
+
 import React from "react";
 
+// third party imports
+
 import { IoIosArrowBack } from "react-icons/io";
-import { BsGithub, BsLinkedin, BsInstagram, BsFacebook } from "react-icons/bs";
+
+import { BsGithub } from "react-icons/bs";
 
 const ProjectDetailPage = ({ data }) => {
   console.log(data);
@@ -16,7 +20,7 @@ const ProjectDetailPage = ({ data }) => {
       <div className="flex flex-col sm:flex-row my-4 ">
         <div className="sm:w-1/2  sm:flex sm:justify-center sm:items-center ">
           <img
-            className="w-[95%] h-full  sm:h-[90%]  sm:my-auto  mx-auto"
+            className="w-[95%] h-full  sm:h-[90%]  sm:my-auto  mx-auto object-fill "
             src={data.imgUrl}
             alt="todo"
           />

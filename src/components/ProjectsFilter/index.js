@@ -1,6 +1,12 @@
-import { tabs, projectsData } from "@/src/Data";
 import React, { useState } from "react";
+
+//import components
+
 import ProjectCard from "../ProjectCard";
+
+import { tabs, projectsData } from "@/src/Data";
+
+// third party imports
 
 import { motion } from "framer-motion";
 

@@ -1,5 +1,8 @@
 import Link from "next/link";
+
 import React from "react";
+
+// third party imports
 
 import { motion } from "framer-motion";
 
@@ -14,7 +17,7 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] bg-slate-400 w-[90%] mx-auto shadow-2xl rounded-2xl  "
+      className="min-h-[400px] bg-slate-400  mx-auto shadow-2xl rounded-2xl  "
     >
       <div className="h-1/2">
         <img
@@ -29,7 +32,7 @@ const ProjectCard = ({ data }) => {
           {data?.title}
         </h1>
         <h1 className="text-center">{data?.description}</h1>
-        <div className="text-center my-4 ">
+        <div className="text-center my-4  ">
           <Link href={data?.Link}>
             <button className="btn from-left text-white">Read more</button>
           </Link>

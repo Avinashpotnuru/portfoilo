@@ -2,6 +2,9 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
 import { pages } from "@/src/Data";
+
+//  import components
+
 import ProjectDetailPage from "@/src/components/ProjectDetailPage";
 import Fade from "@/src/components/Fade";
 
@@ -31,7 +34,7 @@ const ProjectInfoPages = () => {
 
   return (
     <Fade>
-      <div className="mt-24">
+      <div className="mt-24 min-h-[60vh] ">
         <ProjectDetailPage data={pageToRender[id]} pageName={id} />
       </div>
     </Fade>

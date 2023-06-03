@@ -1,12 +1,13 @@
-import Contact from "@/src/components/Contact";
-import Fade from "@/src/components/Fade";
+// import components
 
-import React from "react";
+import Contact from "@/src/components/Contact";
+
+import Fade from "@/src/components/Fade";
 
 const ContactUsPage = () => {
   return (
     <Fade>
-      <div className="mt-24">
+      <div className="mt-24 min-h-[60vh]">
         <Contact />
       </div>
     </Fade>

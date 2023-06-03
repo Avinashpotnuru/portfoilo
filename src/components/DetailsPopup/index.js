@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import Modal from "../UI/Model";
 
+// third party imports
+
 import { AiOutlineClose } from "react-icons/ai";
 
 import { closeDetailsPopup } from "@/src/store/slices/popup";

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { experienceData } from "@/src/Data";
-
+// third party imports
 import { motion } from "framer-motion";
 
 const Experience = () => {

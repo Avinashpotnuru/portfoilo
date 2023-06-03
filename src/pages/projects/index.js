@@ -1,7 +1,9 @@
 import React from "react";
 
-import { tabs } from "@/src/Data";
+// import components
+
 import ProjectsFilter from "@/src/components/ProjectsFilter";
+
 import Fade from "@/src/components/Fade";
 
 const ProjectsPage = () => {

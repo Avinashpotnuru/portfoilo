@@ -1,5 +1,7 @@
 import React from "react";
 
+// third party imports
+
 import { FaSchool, FaCalendarAlt } from "react-icons/fa";
 
 import { HiAcademicCap } from "react-icons/hi";
