@@ -17,13 +17,13 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] bg-slate-400  mx-auto shadow-2xl rounded-2xl  "
+      className="min-h-[400px] bg-slate-400  mx-auto shadow-2xl rounded-xl "
     >
       <div className="h-1/2">
         <img
           src={data.imgUrl}
           alt="project2"
-          className=" h-full w-full mx-auto border-t rounded-t-[16px] "
+          className=" h-full w-full mx-auto border-t rounded-t-[12px] "
         />
       </div>
 

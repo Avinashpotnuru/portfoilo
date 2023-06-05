@@ -38,8 +38,10 @@ const MyDetails = () => {
         className="sm:w-1/2  mx-auto p-5"
       >
         <h1 className="text-2xl  uppercase font-semibold my-1">About Me</h1>
-        <h1 className="text-3xl font-roboto-slab  font-bold my-1 lg:text-[30px] lg:my-2">
-          <span className="text-xl  font-semibold my-1 ">{"I'm "}</span>
+        <h1 className="text-3xl font-roboto-slab text-[#0863bf]  font-bold my-1 lg:text-[30px] lg:my-2">
+          <span className="text-xl text-[black] font-semibold my-1 ">
+            {"I'm "}
+          </span>
           Avinash Potnuru
         </h1>
         <h1 className="text-xl   font-medium my-1 lg:my-2">
@@ -52,14 +54,16 @@ const MyDetails = () => {
           JavaScript, React js, Node js, express js, Python, SQLite.
         </h1>
         <div className="  flex flex-col lg:flex-row justify-center lg:justify-around items-center my-3 w-[80%] lg:w-full  mx-auto ">
-          <motion.button
-            variants={buttonVariants}
-            whileHover="hover"
-            // className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 w-full lg:w-[45%] my-1 "
-            className="button-background-move"
-          >
-            <Link href={"/contact-us"}>Contact Us</Link>
-          </motion.button>
+          <Link href={"/contact-us"}>
+            <motion.button
+              variants={buttonVariants}
+              whileHover="hover"
+              // className="bg-[#0c7fb0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300 w-full lg:w-[45%] my-1 "
+              className="button-background-move"
+            >
+              Contact Us
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
     </div>

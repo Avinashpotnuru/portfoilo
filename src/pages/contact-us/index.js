@@ -7,7 +7,7 @@ import Fade from "@/src/components/Fade";
 const ContactUsPage = () => {
   return (
     <Fade>
-      <div className="mt-24 min-h-[60vh]">
+      <div className="mt-24 ">
         <Contact />
       </div>
     </Fade>

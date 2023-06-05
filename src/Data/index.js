@@ -7,30 +7,41 @@ export const tabs = [
 export const projectsData = [
   {
     id: 1,
-    imgUrl: "/moviesapp.png",
-    title: "Movies App",
-    description: `Implemented Nxt Watch application which is a clone for YouTube where users can log in and can`,
-    category: "react",
-    Link: "/projects/movies-app",
-  },
-  {
-    id: 2,
     imgUrl: "/resturant.png",
     title: "Restaurant Website",
-    description: `Implemented Nxt Watch application which is a clone for YouTube where users can log in and can`,
+    description: `It is a restaurant's website. Along with the ability to reserve a table, this app allows users to view the meal menu,`,
     category: "react",
     Link: "/projects/restaurant",
   },
   {
+    id: 2,
+    imgUrl: "/portfolio.png",
+    title: "Personal Portfolio",
+    description: `Developed In this project, which uses HTML, CSS, JavaScript, and React, I have contributed
+    information `,
+    category: "react",
+    Link: "/projects/portfolio",
+  },
+  {
     id: 3,
+    imgUrl: "/moviesapp.png",
+    title: "Movies App",
+    description: `Implemented responsive OTT platform app like Netflix/Amazon Clone where users can see movies popular,
+    `,
+    category: "react",
+    Link: "/projects/movies-app",
+  },
+
+  {
+    id: 4,
     imgUrl: "/foodmuch.png",
     title: "Food Munch",
-    description: `Implemented Nxt Watch application which is a clone for YouTube where users can log in and can`,
+    description: `Developed a responsive website for a Food Store where users can see a list of food items, detailed information`,
     category: "",
     Link: "/projects/food-munch",
   },
   {
-    id: 4,
+    id: 5,
     imgUrl: "/typemaster.png",
     title: "Typing Speed Test",
     description: `Developed an application that measured the time he took to complete a given paragraph
@@ -39,10 +50,11 @@ export const projectsData = [
     Link: "/projects/type-master",
   },
   {
-    id: 5,
+    id: 6,
     imgUrl: "/todo.png",
     title: "Todo App",
-    description: `Implemented Nxt Watch application which is a clone for YouTube where users can log in and can`,
+    description: `A comprehensive todo management tool designed to enhance productivity .
+    `,
     link: "",
     category: "javascript",
     Link: "/projects/todo-list",
@@ -60,12 +72,26 @@ export const contactDetails = [
   },
 ];
 
+const portfolio = {
+  imgUrl: "/portfolio.png",
+  title: "Personal Portfolio",
+  technologies: "HTML, CSS, React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
+  description: `Developed In this project, which uses HTML, CSS, JavaScript, and React, I have contributed
+    information about myself, my education, and my projects. Users can view this information in the app. This app
+    also has responsive features..`,
+  projectLink: "",
+  githubLink: "",
+  category: "react",
+};
+
 const todolist = {
   imgUrl: "/todo.png",
   title: "Todo App",
   technologies: "HTML, CSS, JavaScript, Bootstrap",
-  description:
-    "Implemented Nxt Watch application which is a clone for YouTube where users can log in and can see a list of videos like Trending, Gaming, Saved videos, and also can search videos and view specific video details, and users can toggle the theme (Light/Dark).",
+  description: `User-friendly interface with HTML, CSS, and Bootstrap for ease of use.
+    Effortless task management through JavaScript-based CRUD operations with dynamic UI updates.
+    Your tasks are always safe with local storage methods to ensure task persistence
+    `,
   projectLink: "",
   githubLink: "",
   category: "javascript",
@@ -122,6 +148,7 @@ export const pages = {
   RestaurantWebsite: RestaurantWebsite,
   FoodMunch: FoodMunch,
   typeMaster: typeMaster,
+  portfolio: portfolio,
 };
 
 export const experienceData = [

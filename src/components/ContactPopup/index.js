@@ -4,6 +4,8 @@ import { useState } from "react";
 
 import { useForm } from "react-hook-form";
 
+import { DevTool } from "@hookform/devtools";
+
 import { useSelector, useDispatch } from "react-redux";
 
 import Modal from "../UI/Model";
@@ -33,12 +35,23 @@ const inputVariants = {
 
 const ContactPopup = () => {
   const dispatch = useDispatch();
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState, control } = useForm();
+
+  const { errors } = formState;
+  // console.log("form state", formState);
+
+  // console.log("err", errors);
+
   const [data, setData] = useState("");
   const contactToggle = useSelector(
     (state) => state.popSlice.contactPopup.status
   );
-  console.log(contactToggle);
+  // console.log(contactToggle);
+
+  const validatePhoneNumber = (value) => {
+    const phoneNumber = value?.replace(/[^0-9]/g, ""); // Remove non-digit characters
+    return phoneNumber?.length === 10 || "Phone number must be 10 digits";
+  };
 
   const onSubmit = (data, e) => {
     console.log(data);
@@ -53,17 +66,21 @@ const ContactPopup = () => {
       parentClasses={" flex justify-center items-center  w-full m-auto"}
       isOpen={contactToggle}
     >
-      <div className="bg-slate-500 relative   w-[95%] h-[70%] sm:h-[500px] sm:w-[500px] flex flex-col justify-center items-center">
+      <div className="relative bg-slate-200   w-[95%] min-h-[90%] sm:h-[500px] sm:w-[500px] flex flex-col justify-center items-center">
         <div
-          onClick={() => dispatch(closeContactPopup())}
-          className="absolute top-7 right-7 hover:text-[20px]"
+          onClick={() => {
+            dispatch(closeContactPopup());
+            reset();
+          }}
+          className="absolute  top-7 right-7 hover:text-[20px]"
         >
           <AiOutlineClose />
         </div>
-        <h1 className="text-3xl my-6 font-bold ">Contact Us</h1>
+        <h1 className="text-3xl my-6 font-bold text-[#0863bf] ">Contact Us</h1>
         <form
           className="flex flex-col justify-center items-center  w-[80%]  "
           onSubmit={handleSubmit(onSubmit)}
+          noValidate
         >
           <div className="flex flex-col w-full ">
             <label
@@ -76,12 +93,19 @@ const ContactPopup = () => {
               variants={inputVariants}
               initial="hidden"
               animate="visible"
+              type="text"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("firstName", {
-                required: true,
+                required: {
+                  value: true,
+                  message: "Name is required",
+                },
               })}
               placeholder="First name"
             />
+            <p className="text-red-600 font-semibold my-1">
+              {errors.firstName?.message}
+            </p>
           </div>
           <div className="flex flex-col w-full ">
             <label className="block text-gray-700 text-sm font-bold my-3">
@@ -89,15 +113,42 @@ const ContactPopup = () => {
             </label>
             <motion.input
               variants={inputVariants}
+              type="email"
               initial="hidden"
               animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("email", {
-                required: true,
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Invalid email formate",
+                },
               })}
-              placeholder="Enter ur Email"
+              placeholder="Enter your Email"
             />
+            <p className="text-red-600 font-semibold my-1">
+              {errors.email?.message}
+            </p>
           </div>
+
+          <div className="flex flex-col w-full ">
+            <label className="block text-gray-700 text-sm font-bold my-3">
+              PHONE NUMBER
+            </label>
+            <motion.input
+              variants={inputVariants}
+              initial="hidden"
+              animate="visible"
+              className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("number", { validate: validatePhoneNumber })}
+              placeholder="Enter your phone number"
+            />
+            {errors.number && (
+              <p className="text-red-600 font-semibold my-1">
+                {errors.number.message}
+              </p>
+            )}
+          </div>
+
           <div className="flex flex-col w-full ">
             <label className="block text-gray-700 text-sm font-bold my-3">
               MESSAGE
@@ -109,17 +160,27 @@ const ContactPopup = () => {
               animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("message", {
-                required: true,
+                required: {
+                  value: true,
+                  message: "Message is required",
+                },
               })}
-              placeholder="Message"
+              placeholder="Enter your Message"
             />
+
+            <p className="text-red-600 font-semibold my-1">
+              {errors.message?.message}
+            </p>
           </div>
 
-          <input
+          {/* <input
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-4"
             type="submit"
-          />
+          /> */}
+
+          <input className="submitbutton " type="submit" />
         </form>
+        <DevTool control={control} />
       </div>
     </Modal>
   );

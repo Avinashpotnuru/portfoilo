@@ -1,4 +1,5 @@
 import React from "react";
+
 import CertificateCard from "../CertificateCard";
 
 import { certificateData } from "@/src/Data";

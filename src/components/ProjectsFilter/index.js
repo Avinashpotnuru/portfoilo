@@ -17,8 +17,8 @@ const ProjectsFilter = () => {
     ? projectsData
     : projectsData.filter((item) => item.category === tabsId);
 
-  console.log(filterData);
-  console.log(tabsId);
+  // console.log(filterData);
+  // console.log(tabsId);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const ProjectsFilter = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.8, delay: 1 }}
-          className="text-3xl font-roboto-slab font-bold text-cyan-500  sm:my-4 text-center my-2 sm:w-1/2"
+          className="text-3xl text-[#0863bf] font-roboto-slab font-bold   sm:my-4 text-center my-2 sm:w-1/2"
         >
           My Projects
         </motion.h1>
@@ -50,7 +50,7 @@ const ProjectsFilter = () => {
           ))}
         </div>
       </div>
-      <div className="mb-5 grid grid-cols-1 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 md:gap-y-10 lg:gap-y-14 md:w-[90%]  md:mx-auto">
+      <div className="mb-5 grid grid-cols-1 gap-4  sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 mx-auto w-[90%]  ">
         {filterData.map((item, idx) => (
           <ProjectCard data={item} key={idx} />
         ))}

@@ -21,7 +21,7 @@ const CertificateCard = ({ data, id }) => {
     >
       <img src={`/certificates/certificate${id + 1}.jpeg`} alt="" />
 
-      <div class="info flex flex-col justify-center items mx-auto  ">
+      <div className="info flex flex-col justify-center items mx-auto  ">
         <h1 className="text-black font-bold my-5 text-2xl text-center font-Lexend ">
           {data?.name}
         </h1>

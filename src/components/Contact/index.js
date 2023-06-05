@@ -63,7 +63,7 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.8, delay: 1 }}
-        className="text-2xl font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10"
+        className="text-2xl text-[#0863bf] font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10"
       >
         Get in touch
       </motion.h1>
@@ -214,10 +214,10 @@ const Contact = () => {
           className="contact"
         >
           Contact US
-          <span class="first"></span>
-          <span class="second"></span>
-          <span class="third"></span>
-          <span class="fourth"></span>
+          <span className="first"></span>
+          <span className="second"></span>
+          <span className="third"></span>
+          <span className="fourth"></span>
         </button>
       </div>
     </div>

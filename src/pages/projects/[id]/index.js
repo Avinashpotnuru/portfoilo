@@ -19,6 +19,7 @@ const ProjectInfoPages = () => {
     restaurant: pages?.RestaurantWebsite,
     "food-munch": pages?.FoodMunch,
     "type-master": pages?.typeMaster,
+    portfolio: pages?.portfolio,
   };
 
   useEffect(() => {

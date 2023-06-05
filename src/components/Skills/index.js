@@ -1,7 +1,9 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+
 import Image from "next/image";
+
 import { skillsData } from "@/src/Data";
 const Skills = () => {
   return (
@@ -10,7 +12,7 @@ const Skills = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.7 }}
-        className="text-3xl font-medium my-3 md:my-6 font-roboto-slab"
+        className="text-3xl font-medium my-3 md:my-6 font-roboto-slab text-[#0863bf]"
       >
         Technical Skills
       </motion.h1>

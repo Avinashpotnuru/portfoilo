@@ -11,7 +11,7 @@ const Experience = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.7 }}
-        className="text-3xl font-medium font-roboto-slab my-3 md:my-6"
+        className="text-3xl text-[#0863bf] font-medium font-roboto-slab my-3 md:my-6"
       >
         Experience
       </motion.h1>
