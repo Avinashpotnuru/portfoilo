@@ -17,16 +17,36 @@
  
 }
 
+.content {
+  /* From https://css.glass */
+background: rgba(22, 22, 22, 0.63);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16.9px);
+-webkit-backdrop-filter: blur(16.9px);
+
+
+
+}
 body{
   --def: black; 	
 	--inv: #fff;
+ 
   
 }
 
+
+
 /* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
  
+ 
+}
+
+::-webkit-scrollbar:horizontal{
+  width: 2px ;
+
 }
 
 /* Track */

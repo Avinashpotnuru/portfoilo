@@ -21,7 +21,7 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 0.7 }}
-          className="text-2xl font-medium my-3 md:my-6 font-roboto-slab text-center"
+          className="text-2xl font-medium my-3 md:my-6 text-[#0863bf] font-roboto-slab text-center"
         >
           Skills
         </motion.h1>

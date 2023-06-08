@@ -35,7 +35,7 @@ const Education = () => {
             >
               <div className="flex items-center my-2 lg:my-3 ">
                 <FaSchool className="sm:text-[30px] mx-4" />
-                <h1 className=" font-bold font-roboto-slab text-lg sm:text-xl">
+                <h1 className="text-[#0863bf] font-bold font-roboto-slab text-lg sm:text-xl">
                   {val.name}
                 </h1>
               </div>
