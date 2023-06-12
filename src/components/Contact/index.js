@@ -20,16 +20,17 @@ import { motion } from "framer-motion";
 
 const iconVariants = {
   hover: {
-    scale: 1.3,
-
-    marginBottom: "10px",
+    scale: 1.2,
+    y: -10,
+    color: "blue",
   },
 };
 
 const cardIconVariants = {
   hover: {
     scale: 0.7,
-    rotateZ: 360,
+    rotateX: 360,
+
     transition: {
       duration: 0.8,
     },
@@ -87,7 +88,7 @@ const Contact = () => {
               <FaUserAlt size={30} />
             </div>
             <motion.div
-              variants={iconVariants}
+              variants={cardIconVariants}
               whileHover="hover"
               className="hidden sm:block"
             >

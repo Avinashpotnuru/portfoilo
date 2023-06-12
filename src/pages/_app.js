@@ -13,11 +13,13 @@ export default function App({ Component, pageProps }) {
         <title>{`Portfolio`}</title>
       </Head>
       <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-          <ContactPopup />
-          <DetailsPopup />
-        </Layout>
+        <div className="overflow-x-container">
+          <Layout>
+            <Component {...pageProps} />
+            <ContactPopup />
+            <DetailsPopup />
+          </Layout>
+        </div>
       </Provider>
     </>
   );

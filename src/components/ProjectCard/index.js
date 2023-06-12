@@ -18,7 +18,7 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] content  mx-auto shadow-2xl rounded-xl "
+      className="min-h-[400px] content  mx-auto shadow-2xl rounded-xl  hover:border-2  hover:border-black "
     >
       <div className="h-1/2">
         <img
@@ -28,7 +28,7 @@ const ProjectCard = ({ data }) => {
         />
       </div>
 
-      <div className="h-1/2 px-3 text-white">
+      <div className="h-1/2 px-3  text-white">
         <h1 className="text-lg font-extrabold text-center  my-4 font-Lexend ">
           {data?.title}
         </h1>

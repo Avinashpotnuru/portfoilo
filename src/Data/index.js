@@ -156,7 +156,7 @@ export const experienceData = [
     id: 1,
     role: "Junior React Js Developer",
     company: "Tech Arion",
-    duration: "December 2022 - April 2023",
+    duration: "December 2022 - May 2023",
     description: [
       "Create a user interface specification of application in an Agile environment.",
       "Implemented end-to-end UI design to provide user-friendly websites for the company and its clients.",
