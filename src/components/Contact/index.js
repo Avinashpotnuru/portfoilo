@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 const iconVariants = {
   hover: {
     scale: 1.2,
-    y: -10,
+    y: -5,
     color: "blue",
   },
 };

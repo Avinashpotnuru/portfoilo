@@ -134,14 +134,39 @@ const ContactPopup = () => {
             <label className="block text-gray-700 text-sm font-bold my-3">
               PHONE NUMBER
             </label>
-            <motion.input
+            {/* <motion.input
               variants={inputVariants}
               initial="hidden"
               animate="visible"
               className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               {...register("number", { validate: validatePhoneNumber })}
               placeholder="Enter your phone number"
+            /> */}
+
+            <motion.input
+              variants={inputVariants}
+              initial="hidden"
+              animate="visible"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              {...register("number", {
+                required: "Phone number is required",
+                minLength: {
+                  value: 10,
+                  message: "Phone number must be 10 digits",
+                },
+                maxLength: {
+                  value: 10,
+                  message: "Phone number must be 10 digits",
+                },
+                pattern: {
+                  value: /^\d{10}$/,
+                  message: "Phone number must contain only digits",
+                },
+              })}
+              maxLength={10}
+              placeholder="Enter your phone number"
             />
+
             {errors.number && (
               <p className="text-red-600 font-semibold my-1">
                 {errors.number.message}
