@@ -34,7 +34,10 @@ const Header = () => {
           </Link>
         </div>
 
-        <div onClick={() => setOpen(!open)} className="md:hidden">
+        <div
+          onClick={() => setOpen(!open)}
+          className="md:hidden transition-all duration-500 "
+        >
           {!open ? <AiOutlineMenu /> : <AiOutlineClose />}
         </div>
 

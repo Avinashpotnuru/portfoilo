@@ -4,11 +4,12 @@ import Link from "next/link";
 // third party imports
 
 import { motion } from "framer-motion";
+import TextContainer from "../TextAnimationConatiner";
 
 const About = () => {
   return (
     <div className="flex flex-col sm:flex-row sm:w-[95%] lg:w-[92%] mx-auto justify-center items-center my-4 ">
-      <motion.div
+      <div
         initial={{ opacity: 0, scale: 0, x: "100vh" }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
@@ -20,9 +21,12 @@ const About = () => {
         >
           hello,
         </motion.h1>
-        <h1 className="text-[#0863bf] typing-animation text-3xl font-roboto-slab   font-bold my-1 lg:text-[40px] lg:my-2">
-          Avinash Potnuru
-        </h1>
+
+        <TextContainer
+          className="text-[#0863bf] typing-animation text-3xl font-roboto-slab   font-bold my-1 lg:text-[40px] lg:my-2"
+          text="Avinash Potnuru"
+        />
+
         <h1 className="text-xl   font-medium my-1 lg:my-2">
           FrontEnd Developer
         </h1>
@@ -47,7 +51,7 @@ const About = () => {
             <button>Download Resume</button>
           </a>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, scale: 0, x: "-100vh" }}
         animate={{ opacity: 1, scale: 1, x: 0 }}

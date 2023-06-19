@@ -10,11 +10,11 @@ import Fade from "../components/Fade";
 
 export default function Home() {
   return (
-    <Fade>
+    <>
       <div className=" mt-24 ">
         <About />
         <MyProjects />
       </div>
-    </Fade>
+    </>
   );
 }

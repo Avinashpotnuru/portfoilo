@@ -9,6 +9,7 @@ import { tabs, projectsData } from "@/src/Data";
 // third party imports
 
 import { motion } from "framer-motion";
+import TextContainer from "../TextAnimationConatiner";
 
 const ProjectsFilter = () => {
   const [tabsId, setTabsId] = useState("");
@@ -31,6 +32,7 @@ const ProjectsFilter = () => {
         >
           My Projects
         </motion.h1>
+
         <div className="flex justify-center space-x-10 items-center my-9 sm:w-1/2">
           {tabs.map((val, idx) => (
             <button

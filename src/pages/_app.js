@@ -10,7 +10,12 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{`Portfolio`}</title>
+        <title>React Developer - Avinash</title>
+        <link rel="icon" href="/namelogo.png" type="image/x-icon" sizes="any" />
+        <meta
+          name="description"
+          content="Avinash is a software developer from Andhra Pradesh with expertise in web development using  React"
+        />
       </Head>
       <Provider store={store}>
         <div className="overflow-x-container">

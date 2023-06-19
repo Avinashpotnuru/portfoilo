@@ -7,13 +7,16 @@ import { projectsData } from "@/src/Data";
 // third party imports
 
 import { motion } from "framer-motion";
+import TextContainer from "../TextAnimationConatiner";
 
 const MyProjects = () => {
   return (
     <div className="mt-2 md:my-10 ">
-      <h1 className="text-2xl text-[#0863bf] font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10">
-        My Projects
-      </h1>
+      <TextContainer
+        text="My Projects"
+        className="text-2xl text-[#0863bf] font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-10"
+      />
+
       <motion.div
         initial={{ opacity: 0, x: "-100vh" }}
         animate={{ opacity: 1, x: 0 }}

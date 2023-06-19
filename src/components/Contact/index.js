@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { openContactPopup } from "@/src/store/slices/popup";
 
 import { motion } from "framer-motion";
+import TextContainer from "../TextAnimationConatiner";
 
 //icon Variants
 
@@ -60,6 +61,10 @@ const Contact = () => {
   const dispatch = useDispatch();
   return (
     <div>
+      {/* <TextContainer
+        text="Get in touch"
+        className="text-2xl text-[#0863bf] font-roboto-slab md:text-5xl font-bold text-center mb-5 md:my-1"
+      /> */}
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -5,6 +5,7 @@ import React from "react";
 // third party imports
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectCard = ({ data }) => {
   // console.log(data);
@@ -18,13 +19,15 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] content  mx-auto shadow-2xl rounded-xl  hover:border-2  hover:border-black "
+      className="min-h-[400px] content  mx-auto shadow-2xl rounded-xl  "
     >
-      <div className="h-1/2">
-        <img
+      <div className="h-1/2 overflow-hidden">
+        <Image
+          width={240}
+          height={140}
           src={data.imgUrl}
           alt="project2"
-          className=" h-full w-full mx-auto border-t rounded-t-[12px] "
+          className=" rounded-xl hover:scale-110 duration-500 transition-all   h-full w-full mx-auto border-t rounded-t-[12px] "
         />
       </div>
 
