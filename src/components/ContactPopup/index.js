@@ -19,6 +19,7 @@ import {
   closeContactPopup,
   openDetailsPopup,
 } from "@/src/store/slices/popup";
+import TextContainer from "../TextAnimationConatiner";
 
 const inputVariants = {
   hidden: {
@@ -76,7 +77,11 @@ const ContactPopup = () => {
         >
           <AiOutlineClose />
         </div>
-        <h1 className="text-3xl my-6 font-bold text-[#0863bf] ">Contact Us</h1>
+        <TextContainer
+          text="Contact Us"
+          className="text-3xl my-6 font-bold text-[#0863bf] "
+        />
+
         <form
           className="flex flex-col justify-center items-center  w-[80%]  "
           onSubmit={handleSubmit(onSubmit)}
@@ -134,14 +139,6 @@ const ContactPopup = () => {
             <label className="block text-gray-700 text-sm font-bold my-3">
               PHONE NUMBER
             </label>
-            {/* <motion.input
-              variants={inputVariants}
-              initial="hidden"
-              animate="visible"
-              className="  shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              {...register("number", { validate: validatePhoneNumber })}
-              placeholder="Enter your phone number"
-            /> */}
 
             <motion.input
               variants={inputVariants}

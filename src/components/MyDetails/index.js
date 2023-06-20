@@ -26,7 +26,7 @@ const MyDetails = () => {
         className="sm:w-1/2 "
       >
         <img
-          className="w-[90%] sm-[95%] md:h-[380px] md:w-[380px] lg:h-[431px] lg:w-[400px] mx-auto"
+          className="w-[90%] sm-[95%] md:h-[380px] md:w-[380px] lg:h-[400px] lg:w-[400px] mx-auto"
           src="/certificates/profile-pic (13).png"
           alt="myImage"
         />

@@ -8,6 +8,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { usePathname } from "next/navigation";
+import TextContainer from "../TextAnimationConatiner";
 
 const Header = () => {
   const path = usePathname();
@@ -30,7 +31,10 @@ const Header = () => {
   text-gray-800"
         >
           <Link href={"/"}>
-            <div className="font-roboto-slab font-extrabold "> Avinash </div>
+            <TextContainer
+              text="Avinash"
+              className="font-roboto-slab font-extrabold text-[#0863bf]"
+            />
           </Link>
         </div>
 

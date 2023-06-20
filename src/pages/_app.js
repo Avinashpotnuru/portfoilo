@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>React Developer - Avinash</title>
+        <title>Avinash - React Developer </title>
         <link rel="icon" href="/namelogo.png" type="image/x-icon" sizes="any" />
         <meta
           name="description"

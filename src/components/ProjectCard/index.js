@@ -11,7 +11,7 @@ const ProjectCard = ({ data }) => {
   // console.log(data);
   return (
     <motion.div
-      whileHover={{ y: -10, duration: 0.02, delay: 0.1 }}
+      whileHover={{ duration: 0.02, delay: 0.1 }}
       initial={{
         opacity: 0,
         translateX: data.id % 2 == 1 ? "-100vh" : "130vh",
@@ -19,9 +19,9 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] content  mx-auto shadow-2xl rounded-xl  "
+      className="min-h-[400px] group bg-[#0c7fb0]  mx-auto shadow-2xl rounded-xl overflow-hidden "
     >
-      <div className="h-1/2 overflow-hidden">
+      <div className="h-1/2 overflow-hidden ">
         <Image
           width={240}
           height={140}
@@ -31,14 +31,18 @@ const ProjectCard = ({ data }) => {
         />
       </div>
 
-      <div className="h-1/2 px-3  text-white">
-        <h1 className="text-lg font-extrabold text-center  my-4 font-Lexend ">
+      <div className="h-1/2 px-3    text-black group">
+        <h1 className="text-lg font-extrabold text-center group-hover:text-white  my-4 font-Lexend  ">
           {data?.title}
         </h1>
-        <h1 className="text-center">{data?.description}</h1>
+        <h1 className="text-center group-hover:text-white">
+          {data?.description}
+        </h1>
         <div className="text-center my-4  ">
           <Link href={data?.Link}>
-            <button className="btn from-left text-white">Read more</button>
+            <button className="btn from-left font-roboto-slab text-white">
+              Read more
+            </button>
           </Link>
         </div>
       </div>
