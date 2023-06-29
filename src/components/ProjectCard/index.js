@@ -19,7 +19,7 @@ const ProjectCard = ({ data }) => {
       }}
       animate={{ opacity: 1, translateX: 0, translateY: 0 }}
       transition={{ delay: 1, duration: data.id * 0.3 }}
-      className="min-h-[400px] group bg-[#0c7fb0]  mx-auto shadow-2xl rounded-xl overflow-hidden "
+      className="min-h-[400px] group bg-[#0c7fb0]   mx-auto shadow-2xl rounded-xl overflow-hidden "
     >
       <div className="h-1/2 overflow-hidden ">
         <Image
@@ -27,7 +27,7 @@ const ProjectCard = ({ data }) => {
           height={140}
           src={data.imgUrl}
           alt="project2"
-          className=" rounded-xl hover:scale-110 duration-500 transition-all   h-full w-full mx-auto border-t rounded-t-[12px] "
+          className="  rounded-xl hover:scale-110 duration-500 transition-all   h-full w-full mx-auto border-t rounded-t-[12px] "
         />
       </div>
 

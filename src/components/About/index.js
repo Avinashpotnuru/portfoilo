@@ -63,7 +63,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1, staggerChildren: 0.08 }}
-          className="md:border-2 md:border-black md:rounded-[50%] md:h-[400px] md:w-[400px] lg:h-[440px] lg:w-[440px] flex justify-center items-center"
+          className="lg:border-2 lg:border-black md:rounded-[50%] md:h-[400px] md:w-[400px] lg:h-[440px] lg:w-[440px] flex justify-center items-center"
         >
           <img
             className="w-[90%] sm-[95%] md:h-[380px] md:w-[380px] lg:h-[400px] lg:w-[400px] mx-auto"

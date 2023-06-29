@@ -1,3 +1,12 @@
+import { AiFillHtml5 } from "react-icons/ai";
+import { BsFillBootstrapFill } from "react-icons/bs";
+
+import { DiCss3, DiReact } from "react-icons/di";
+import { FaFigma, FaBootstrap } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
+
+import { TbBrandTailwind, TbBrandRedux, TbBrandNextjs } from "react-icons/tb";
+
 export const tabs = [
   { id: 1, tab: "All", category: "" },
   { id: 2, tab: "Java Script", category: "javascript" },
@@ -7,7 +16,7 @@ export const tabs = [
 export const projectsData = [
   {
     id: 1,
-    imgUrl: "/resturant.png",
+    imgUrl: "/resturaant.webp",
     title: "Restaurant Website",
     description: `It is a restaurant's website. Along with the ability to reserve a table, this app allows users to view the meal menu,`,
     category: "react",
@@ -59,6 +68,16 @@ export const projectsData = [
     category: "javascript",
     Link: "/projects/todo-list",
   },
+  {
+    id: 7,
+    imgUrl: "/reacttodolist.png",
+    title: "React Todo App",
+    description: `A comprehensive todo management tool designed to enhance productivity .
+    `,
+    link: "",
+    category: "react",
+    Link: "/projects/react-todolist",
+  },
 ];
 
 export const contactDetails = [
@@ -75,7 +94,17 @@ export const contactDetails = [
 const portfolio = {
   imgUrl: "/portfolio.png",
   title: "Personal Portfolio",
-  technologies: "HTML, CSS, React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
+  // technologies: "HTML, CSS, React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <TbBrandTailwind className="text-[70px]" /> },
+    { icon: <DiReact className="text-[70px]" /> },
+    { icon: <TbBrandNextjs className="text-[70px]" /> },
+    { icon: <TbBrandRedux className="text-[70px]" /> },
+    { icon: <FaFigma className="text-[60px]" /> },
+  ],
+
   description: `Developed In this project, which uses HTML, CSS, JavaScript, and React, I have contributed
     information about myself, my education, and my projects. Users can view this information in the app. This app
     also has responsive features..`,
@@ -87,7 +116,13 @@ const portfolio = {
 const todolist = {
   imgUrl: "/todo.png",
   title: "Todo App",
-  technologies: "HTML, CSS, JavaScript, Bootstrap",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <FaBootstrap className="text-[70px]" /> },
+    { icon: <SiJavascript className="text-[60px]" /> },
+  ],
+
   description: `User-friendly interface with HTML, CSS, and Bootstrap for ease of use.
     Effortless task management through JavaScript-based CRUD operations with dynamic UI updates.
     Your tasks are always safe with local storage methods to ensure task persistence
@@ -97,11 +132,41 @@ const todolist = {
   category: "javascript",
 };
 
+const reacttodolist = {
+  imgUrl: "/reacttodolist.png",
+  title: "React Todo App",
+  // technologies: "HTML, CSS, JavaScript, React",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+
+    { icon: <SiJavascript className="text-[60px]" /> },
+    { icon: <DiReact className="text-[70px]" /> },
+  ],
+  description: `User-friendly interface with HTML, CSS, and React for ease of use.
+    Effortless task management through JavaScript-based CRUD operations with dynamic UI updates.
+    
+    `,
+  projectLink: "",
+  githubLink: "",
+  category: "react",
+};
+
 const moviesApp = {
   imgUrl: "/moviesapp.png",
   title: "Movies App",
-  technologies:
-    "HTML, CSS, JavaScript, React JS, Bootstrap, React Slick, Figma, client storage",
+  // technologies:
+  //   "HTML, CSS, JavaScript, React JS, Bootstrap, React Slick, Figma, client storage",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <FaBootstrap className="text-[70px]" /> },
+
+    { icon: <SiJavascript className="text-[60px]" /> },
+    { icon: <DiReact className="text-[70px]" /> },
+    { icon: <FaFigma className="text-[60px]" /> },
+  ],
+
   description: `Implemented responsive OTT platform app like Netflix/Amazon Clone where users can see movies like popular,
     trending, top-rated, and also can search movies and view specific movie details.`,
   projectLink: "",
@@ -110,9 +175,19 @@ const moviesApp = {
 };
 
 const RestaurantWebsite = {
-  imgUrl: "/resturant.png",
+  imgUrl: "/resturaant.webp",
   title: "Restaurant Website",
-  technologies: " React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
+  // technologies: " React.js, Next.Js, Tailwind CSS, Redux Tool Kit",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <TbBrandTailwind className="text-[70px]" /> },
+    { icon: <DiReact className="text-[70px]" /> },
+    { icon: <TbBrandNextjs className="text-[70px]" /> },
+    { icon: <TbBrandRedux className="text-[70px]" /> },
+    { icon: <FaFigma className="text-[60px]" /> },
+  ],
+
   description: `It is a restaurant's website. Along with the ability to reserve a table, this app allows users to view the meal
   menu, chef information, restaurant information, and daily activity at the restaurant. With This Website, users
   can access everything easily`,
@@ -124,7 +199,11 @@ const RestaurantWebsite = {
 const FoodMunch = {
   imgUrl: "/foodmuch.png",
   title: "Food Munch",
-  technologies: "  HTML, CSS, Bootstrap",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <FaBootstrap className="text-[70px]" /> },
+  ],
   description: `Developed a responsive website for Food Store where users can see a list of food items, detailed information
   about a food item, and offers.`,
   projectLink: "",
@@ -135,7 +214,11 @@ const FoodMunch = {
 const typeMaster = {
   imgUrl: "/typemaster.png",
   title: "Typing Speed Test",
-  technologies: "HTML, CSS, Bootstrap",
+  technologies: [
+    { icon: <AiFillHtml5 className="text-[70px]" /> },
+    { icon: <DiCss3 className="text-[70px]" /> },
+    { icon: <FaBootstrap className="text-[70px]" /> },
+  ],
   description: ` Developed an application that measured the time he took to complete a given paragraph`,
   projectLink: "",
   githubLink: "",
@@ -149,6 +232,7 @@ export const pages = {
   FoodMunch: FoodMunch,
   typeMaster: typeMaster,
   portfolio: portfolio,
+  reacttodolist: reacttodolist,
 };
 
 export const experienceData = [
@@ -189,6 +273,7 @@ export const skillsData = [
   "Tailwind CSS",
   "Redux Toolkit",
   "Figma",
+  "mongo Db",
 ];
 
 export const educationDetails = [

@@ -20,6 +20,7 @@ const ProjectInfoPages = () => {
     "food-munch": pages?.FoodMunch,
     "type-master": pages?.typeMaster,
     portfolio: pages?.portfolio,
+    "react-todolist": pages?.reacttodolist,
   };
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const ProjectInfoPages = () => {
 
   return (
     <Fade>
-      <div className="mt-24 min-h-[60vh] ">
+      <div className="mt-16  md:min-h-[06vh] flex justify-center items-center ">
         <ProjectDetailPage data={pageToRender[id]} pageName={id} />
       </div>
     </Fade>

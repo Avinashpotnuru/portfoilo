@@ -55,7 +55,7 @@ const Footer = () => {
           <motion.a
             variants={iconVariants}
             whileHover="hover"
-            href=""
+            href="https://www.instagram.com/potnuru_avinash/"
             target="_blank"
           >
             <BsInstagram size={34} />
@@ -63,7 +63,7 @@ const Footer = () => {
           <motion.a
             variants={iconVariants}
             whileHover="hover"
-            href=""
+            href="https://www.facebook.com/avinash.potnuru.18/"
             target="_blank"
           >
             <BsFacebook size={34} />

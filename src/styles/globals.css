@@ -47,7 +47,9 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
+  height: 10px !important;
   background: transparent;
+
 }
 
 /* Handle */
@@ -56,6 +58,13 @@ body{
   border-radius: 5px;
   
 }
+
+.overflow-desk::-webkit-scrollbar {
+  height: 6px !important;
+  width: 200px !important;
+}
+
+
 
 
 
@@ -359,6 +368,66 @@ body{
 
 .submitbutton:hover::after,
 .submitbutton:hover::before{
+  opacity: 1;
+  right: 15px;
+}
+
+
+
+
+.moreprojectsbutton{
+  padding: 15px 40px;
+  background: #000;
+  border:0;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: helvetica;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.moreprojectsbutton::after,
+.moreprojectsbutton::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-20%);
+    opacity: 0;
+  transition:all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.moreprojectsbutton::after{
+    width: 30px;
+    height: 1px;
+    background: white;
+    transform: translateX(-3px);
+    margin-top: 0px;
+}
+
+.moreprojectsbutton::before{
+    content: "";
+    transform: rotate(-135deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+  margin-top: -1px;
+}
+
+
+.moreprojectsbutton:hover{
+  padding: 15px 60px 15px 20px;
+}
+
+.moreprojects:hover::after,
+.moreprojects:hover::before{
   opacity: 1;
   right: 15px;
 }

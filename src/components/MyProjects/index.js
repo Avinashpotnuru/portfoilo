@@ -8,6 +8,8 @@ import { projectsData } from "@/src/Data";
 
 import { motion } from "framer-motion";
 import TextContainer from "../TextAnimationConatiner";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 const MyProjects = () => {
   return (
@@ -23,10 +25,20 @@ const MyProjects = () => {
         transition={{ delay: 0.8, duration: 1.2 }}
         className="mb-5 grid grid-cols-1 gap-4  sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 mx-auto w-[90%]    "
       >
-        {projectsData.map((item, idx) => (
+        {projectsData.slice(0, 3).map((item, idx) => (
           <ProjectCard data={item} key={idx} />
         ))}
       </motion.div>
+      <div className="flex justify-center items-center group ">
+        <Link href={"/projects"}>
+          <div className="bg-[#0c7fb0] font-roboto-slab  transition-all duration-1000  ease-in-out hover:bg-blue-700 flex justify-center items-center space-x-2 text-white  py-2 px-4 rounded">
+            <h1 className="">More Projects</h1>
+            <div className="hidden group-hover:block  ">
+              <AiOutlineArrowRight />
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };
