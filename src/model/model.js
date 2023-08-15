@@ -19,6 +19,10 @@ const clientSchema = new mongoose.Schema({
   },
 });
 
-const Details = mongoose.model("Details", clientSchema);
+// const Details = mongoose.model("Details", clientSchema);
 
-module.exports = Details;
+// module.exports = Details;
+// export default Details;
+
+export const Details =
+  mongoose.models.Details || mongoose.model("Details", clientSchema);

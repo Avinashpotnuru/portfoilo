@@ -27,7 +27,7 @@ const DetailsPopup = () => {
 
   const postToBackend = () => {
     axios
-      .post("http://localhost:4000/addclientdetails", {
+      .post("/api/add-client-details", {
         ...details,
         // headers: {
         //   "Content-Type": "application/json",
@@ -38,6 +38,16 @@ const DetailsPopup = () => {
       .catch((err) => console.log(err));
     setToggle(true);
     console.log("haiii");
+
+    // fetch("/api/client-details", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   body: JSON.stringify({ ...data }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
 
     // console.log(details);
   };
