@@ -1,6 +1,6 @@
 // third party imports
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useForm } from "react-hook-form";
 
@@ -13,6 +13,8 @@ import Modal from "../UI/Model";
 import { motion } from "framer-motion";
 
 import { AiOutlineClose } from "react-icons/ai";
+
+import axios from "axios";
 
 import {
   openContactPopup,
@@ -55,10 +57,12 @@ const ContactPopup = () => {
   };
 
   const onSubmit = (data, e) => {
-    console.log(data);
+    // console.log(JSON.stringify(data));
+
     setData(data);
     dispatch(openDetailsPopup(data));
     dispatch(closeContactPopup());
+
     reset();
   };
 
